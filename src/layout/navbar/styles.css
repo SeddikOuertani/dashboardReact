@@ -1,0 +1,38 @@
+ul {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.1rem;
+}
+
+nav {
+    flex: 1;
+}
+
+.navigation-bar {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+img {
+    height: 80px;
+}
+
+li:hover {
+  color: var(--primary)
+}
+
