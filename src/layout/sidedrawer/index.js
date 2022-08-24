@@ -4,17 +4,15 @@ import SidedrawerBg from "../../assets/images/sidedrawer_bg.webp";
 import "./styles.css";
 
 const Sidedrawer = (props) => {
-
   const sidedrawerToggled = props.sidedrawerToggled;
   const sidedrawerRef = props.Ref;
-  useEffect(()=>{
-    if(sidedrawerToggled){
-      sidedrawerRef.current.style.transform = `translateX(75vw)`
+  useEffect(() => {
+    if (sidedrawerToggled) {
+      sidedrawerRef.current.style.transform = `translateX(75vw)`;
+    } else {
+      sidedrawerRef.current.style.transform = `translateX(0)`;
     }
-    else{
-      sidedrawerRef.current.style.transform = `translateX(0)`
-    }
-  },[sidedrawerToggled, sidedrawerRef])
+  }, [sidedrawerToggled, sidedrawerRef]);
 
   return (
     <div ref={sidedrawerRef} className="sidedrawer">

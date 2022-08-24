@@ -21,26 +21,45 @@
       "linkPath": "/linkPath1"
     }
   ],
-  "asideLinks": [
-    {
-      "linkName": "overview",
-      "iconName" : ["fa", "pie-chart"],
-      "linkPath": "/linkPath1"
-    },
-    {
-      "linkName": "courses",
-      "iconName" : ["fa","book"],
-      "linkPath": "/linkPath1"
-    },
-    {
-      "linkName": "about",
-      "iconName" : ["fa","info-circle"],
-      "linkPath": "/linkPath1"
-    },
-    {
-      "linkName": "settings",
-      "iconName" : ["fa","gear"],
-      "linkPath": "/linkPath1"
-    }
-  ]
+  "asideLinks": {
+    "topLinks": [
+      {
+        "linkName": "overview",
+        "iconName": ["fa", "pie-chart"],
+        "linkPath": "/linkPath1"
+      },
+      {
+        "linkName": "courses",
+        "iconName": ["fa", "book"],
+        "linkPath": "/linkPath1"
+      },
+      {
+        "linkName": "about",
+        "iconName": ["fa", "info-circle"],
+        "linkPath": "/linkPath1"
+      },
+      {
+        "linkName": "settings",
+        "iconName": ["fa", "gear"],
+        "linkPath": "/linkPath1"
+      }
+    ],
+    "bottomLinks" : [
+      {
+        "linkName": "courses",
+        "iconName": ["fa", "book"],
+        "linkPath": "/linkPath1"
+      },
+      {
+        "linkName": "about",
+        "iconName": ["fa", "info-circle"],
+        "linkPath": "/linkPath1"
+      },
+      {
+        "linkName": "settings",
+        "iconName": ["fa", "gear"],
+        "linkPath": "/linkPath1"
+      }
+    ]
+  }
 }
