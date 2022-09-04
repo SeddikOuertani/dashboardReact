@@ -1,5 +1,5 @@
 import React from "react";
-import './styles.css'
+import './style.css'
 const BurgerMenu = (props) => {
   return (
     <div onClick={props.toggleFunction} className="burger-menu open-button">

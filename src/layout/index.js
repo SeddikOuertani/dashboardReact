@@ -1,15 +1,14 @@
 import React from "react";
 import Aside from "./aside";
 import Main from "./main";
-import Navbar from "./navbar";
+import './style.css';
 
 const Layout = (props) => {
   return (
-    <>
-      <Navbar links={props.data.links}></Navbar>
-      <Aside links={props.data.asideLinks}></Aside>
-      <Main></Main>
-    </>
+    <div className="layout">
+      <Aside linkFontSize={"var(--small-spacing)"} links={props.data.asideLinks}></Aside>
+      <Main {...props}></Main>
+    </div>
   );
 };
 

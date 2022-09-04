@@ -1,0 +1,91 @@
+.search-input-wrapper {
+    width: fit-content;
+    max-width: 500px;
+    border-radius: 2rem;
+    background-color: rgb(0, 0, 0, 0) !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-2s);
+    -o-transition : var(--transition-2s);
+    -moz-transition: var(--transition-2s);
+    -webkit-transition : var(--transition-2s);
+}
+
+.input-wrapper {
+    cursor: text;
+    display: flex;
+    flex: 1;
+    transition: var(--transition-2s);
+    -o-transition : var(--transition-2s);
+    -moz-transition: var(--transition-2s);
+    -webkit-transition : var(--transition-2s);
+}
+
+.icon-wrapper {
+    padding: var(--small-spacing);
+    display: flex;
+    border-radius: .5rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--secondary);
+    transition: var(--transition-2s);
+    -o-transition : var(--transition-2s);
+    -moz-transition: var(--transition-2s);
+    -webkit-transition : var(--transition-2s);
+}
+
+.icon-wrapper:hover{
+    background-color: var(--secondary-dark);
+}
+
+.search-icon{
+    transition: var(--transition-1s);
+    -o-transition : var(--transition-1s);
+    -moz-transition: var(--transition-1s);
+    -webkit-transition : var(--transition-1s);
+}
+
+.icon-wrapper:hover .search-icon{
+    transform: scaleX(140%) scaleY(150%);
+}
+
+.search-input{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: black;
+    caret-color: var(--primary);
+    margin: auto;
+    transition: all .2s ease-in-out;
+    width: 0rem;
+    transition: var(--transition-2s);
+    -o-transition : var(--transition-2s);
+    -moz-transition: var(--transition-2s);
+    -webkit-transition : var(--transition-2s);
+}
+
+.search-input:focus{
+    width: 20rem;
+}
+
+.search-input-wrapper:focus-within{
+    background-color: white !important;   
+}
+
+.search-input-wrapper:focus-within .icon-wrapper{
+    background-color: var(--primary);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color : black
+}
+
+
+.search-input-wrapper:focus-within .input-wrapper{
+    padding-left : var(--small-spacing)
+}

@@ -1,34 +1,28 @@
-import React, { useState, useRef } from "react";
-import Logo from "../../assets/images/logo.png";
-import BurgerMenu from "../../components/burgermenu";
-import Sidedrawer from "../sidedrawer";
+import React, { useState } from "react";
+import SearchInput from "../../components/searchinput";
+import LogoutButton from "../../components/logoutbutton";
 import "./styles.css";
+import { removeSlash, toTitleCase } from "../../utils";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Navbar = (props) => {
-  const [sidedrawerToggled, toggleSidedawer] = useState(true);
+  const location = useLocation();
 
-  const handleSidedrawer = () => {
-    toggleSidedawer(!sidedrawerToggled);
-  };
-
-  const sidedrawerRef = useRef(null)
-
+  useEffect(() => {
+    console.log(location);
+  }, [location]);
 
   return (
-    <header className="navigation-bar">
-      <Sidedrawer Ref={sidedrawerRef} sidedrawerToggled={sidedrawerToggled} links={props.links} />
-      <img src={Logo} alt="" />
-      <nav>
-        <ul>
-          {props.links.map((link, index) => {
-            return (
-              <li key={`navbar-link${index}`}>{link.linkName.toUpperCase()}</li>
-            );
-          })}
-        </ul>
+    <div className="navigation-bar"> 
+      <div className="page-name">
+          {location.pathname ? toTitleCase(removeSlash(location.pathname)) : "no path"}
+        </div>
+      <nav className="nav">
+        <SearchInput />
+        <LogoutButton />
       </nav>
-      <BurgerMenu toggleFunction={handleSidedrawer} />
-    </header>
+    </div>
   );
 };
 

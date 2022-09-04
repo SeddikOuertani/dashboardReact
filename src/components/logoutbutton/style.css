@@ -1,0 +1,28 @@
+.logout-btn-wrapper{
+    border-radius: .5rem;
+    background-color: var(--danger);
+    width: fit-content !important;
+    height : 100% !important;
+    padding : var(--small-spacing);
+    cursor : pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : white;
+    transition: var(--transition-2s);
+    -o-transition : var(--transition-2s);
+    -moz-transition: var(--transition-2s);
+    -webkit-transition : var(--transition-2s);
+}
+
+.logout-icon{
+    transition: all .1s cubic-bezier(0.42, 0, 0.74, 2.16)
+}
+
+.logout-btn-wrapper:hover{
+    background-color: var(--danger-dark);
+}
+
+.logout-btn-wrapper:hover .logout-icon{
+    transform: scaleX(140%) scaleY(150%);
+}

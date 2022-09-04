@@ -6,17 +6,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 125vh;
-  background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
+  background-color: var(--neutral);
   background-size: cover;
   font-family: sans-serif;
   scroll-behavior: none;
-  margin-top: 80px;
-  padding: 30px;
+  padding: 0;
 }
 
 html,
 body{
-  height : 100;
+  height : 100%;
+}
+
+#root{
+  height : 100%;
 }
 
 * {
@@ -38,6 +41,39 @@ code {
 }
 
 :root{
+  /* colors */
+  --neutral : rgb(218, 218, 218);
+  
+  --primary-light : rgb(237, 163, 105);
   --primary : rgb(237, 134, 56);
-  --secondary : #bbb;
+  --primary-dark : rgb(192, 110, 47);
+  
+  --secondary-light : #5eaeea;
+  --secondary : #389FED;
+  --secondary-dark : #2c7bb9;
+
+  --danger-light : #bd7074;
+  --danger : #bd444a;
+  --danger-dark : #8f3438;
+  
+  /* spacing */
+  --large-spacing : 6rem;
+  --medium-spacing : 3rem;
+  --small-spacing : 1rem;
+  --xsmall-spacing : .8rem;
+  --tiny-spacing : 0.5rem;
+
+  /* animation*/
+  --transition-2s : all .2s ease-in-out;
+  --transition-1s : all .1s ease-in-out;
+  --transition-5s : all .5s ease-in-out;
+  --transition-1S : all 1s ease-in-out;
+}
+
+.page-box {
+  background-color: white ;
+  border-radius: var(--small-spacing);
+  box-shadow: 0 .5rem 1rem 1px rgba(0, 0, 0, 0.3);
+  height : 100%;
+  width: 100%;
 }

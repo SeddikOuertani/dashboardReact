@@ -1,11 +1,11 @@
 .burger-menu {
     position : absolute;
     top: 5vh;
-    right : 1vh;
+    right : var(--small-spacing);
     width: 50px;
     display: flex;
     flex-direction: column;
-    row-gap: 1vh;
+    row-gap: var(--small-spacing);
     cursor: pointer;
 }
 

@@ -1,0 +1,16 @@
+.layout {
+    display: flex;
+    flex-direction: row;
+    height: 100% !important;
+}
+
+@media screen and (max-width : 850px) {
+    .aside {
+        transform: translateX(-200px);
+    }
+
+    .main-wrapper {
+        transform : translateX(0);
+        right : 0
+    }
+}
